@@ -1,1 +1,1 @@
-# -luclinux
+# luclinux
