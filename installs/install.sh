@@ -9,7 +9,7 @@ packages[3]="audacity gimp inkscape xnviewmp mpv phonon-qt6-mpv-git python-mutag
 packages[4]="thunderbird kalk libreoffice-fresh nomachine visual-studio-code-bin pfetch fastfetch nomachine"
 packages[5]="epson-inkjet-printer-202101w epson-inkjet-printer-escpr epson-inkjet-printer-escpr2 epson-printer-utility cups xsane-git"
 packages[6]="gnome-disk-utility kwalletmanager gpu-passthrough-manager timeshift kdeconnect btop"
-packages[7]="alacritty zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting tmux oh-my-zsh-git eza rsync veracrypt librewolf-bin samba reflector"
+packages[7]="kitty kitty-terminfo zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting tmux oh-my-zsh-git eza rsync veracrypt librewolf-bin samba reflector yazi pfetch fastfetch"
 packages[8]="gimp-plugin-beautify gimp-plugin-bimp gimp-plugin-export-layers gimp-plugin-gmic gimp-plugin-resynthesizer gimp-plugin-saveforweb"
 packages[9]="dosfstools ntfs-3g exfat-utils btrfs-progs xfsprogs f2fs-tools udftools"
 
@@ -17,7 +17,7 @@ echome(){
     clear &&
     echo "                Options are:               Q - quit   "       &&
     echo "########################################################################" &&
-    echo " 0 - all      1 - wine    2 - fonts  3 - media        4 - apps"            &&
+    echo " 0 - all      1 - wine    2 - fonts  3 - media-tools  4 - apps"            &&
     echo " 5 - printer  6 - system  7 - base   8 - Gimp Addons  9 - System Files "   &&
     echo " 10 - VM                                      11 - Create Bridge     "      &&
     echo "########################################################################"
