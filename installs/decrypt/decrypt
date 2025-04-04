@@ -1,0 +1,23 @@
+#!/bin/bash
+
+read -s PASSWORD
+
+# Volume 1
+VCVOLUME=/dev/disk/by-partlabel/home-data
+VCMOUNT=/mnt/home-data
+VCMAPNAME=home-data
+if ! mountpoint -q "$VCMOUNT"; then
+  mkdir -p "$VCMOUNT"
+  echo "$PASSWORD" | cryptsetup --type tcrypt --veracrypt open "$VCVOLUME" "$VCMAPNAME"
+  mount "/dev/mapper/$VCMAPNAME" "$VCMOUNT"
+fi
+
+# Volume 2
+VCVOLUME=/dev/disk/by-partlabel/2TB-1-crypt
+VCMOUNT=/mnt/2TB-1-crypt
+VCMAPNAME=2TB-1-crypt
+if ! mountpoint -q "$VCMOUNT"; then
+  mkdir -p "$VCMOUNT"
+  echo "$PASSWORD" | cryptsetup --type tcrypt --veracrypt open "$VCVOLUME" "$VCMAPNAME"
+  mount "/dev/mapper/$VCMAPNAME" "$VCMOUNT"
+fi
