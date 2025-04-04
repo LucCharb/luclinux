@@ -1,0 +1,13 @@
+[open]
+rules = [
+  { mime = "image/*", use = "xnview" },   # Images with XnView
+  { mime = "text/*", use = "vscode" }     # Text files with VS Code
+]
+
+[opener]
+xnview = [
+  { run = "xnviewmp \"$@\"", block = true, for = "unix" }
+]
+vscode = [
+  { run = "code --wait \"$@\"", block = true, for = "unix" }
+]
