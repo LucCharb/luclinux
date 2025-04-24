@@ -45,9 +45,12 @@ check_yay_installed() {
 install_packages() {
   echo "This will install "$@""
   read -p "You ok with that? " confirm
-  [ "$confirm" = "y" ] || [ "$confirm" = "Y" ] &&
-  echo "Installing "$@""
-  yay -S --noconfirm --needed "$@"
+  if [[ $confirm =~ ^[yY]$ ]]; then
+    echo "Installing $@"
+    yay -S --noconfirm --needed "$@"
+  else
+    echo "Installation aborted."
+  fi    
 }
 
 create_bridge(){
